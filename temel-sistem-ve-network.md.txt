@@ -1,0 +1,518 @@
+GİRİŞ
+Bu doküman, öğrencilik dönemimde okuldan ve internetten edindiğim ders kaynaklarından topladığım notların derlenmesiyle hazırlanmıştır.
+Giriş seviyesindeki bireyler için kısa ve öz açıklamalar içermektedir.
+
+Bazı kavramlar mümkün olduğunca sade bir şekilde anlatılmıştır. Ancak burada verilen bilgilerin ardından, konular üzerinde kendi araştırmanızı yaparak daha fazla bilgi edinmenizi ve bilgileri teyit etmenizi öneririm.
+Bu notlar, temel kavramları mantıksal olarak kavrayıp fikir sahibi olmanızı amaçlamaktadır.
+
+Başarılar dilerim!
+
+BİLGİSAYARA GİRİŞ
+Temel Kavramlar
+Bit:
+0 ve 1 rakamlarından oluşur.
+
+Byte:
+8 bit’ten oluşur.
+
+Depolamada genellikle byte kavramı kullanılır.
+
+İnternet hızında ise bit kavramı kullanılır.
+
+Bit her zaman küçük "b" harfi ile belirtilir. (Örneğin: 100 Mbps)
+
+Klavye:
+Klavyede her bir tuş bir byte’a karşılık gelir.
+
+ASCII:
+Her bir harf, rakam ve sembole karşılık gelen sayıları gösteren evrensel bir listedir.
+
+Veri Yolu
+Byte’ların iletildiği ve dönüştürüldüğü yollara "veri yolu" denir.
+
+Veri yolunun genişliği, bilgisayarın birim zamanda ne kadar veri iletebildiğini gösterir.
+
+32 bit ve 64 bit veri yolları bulunur.
+
+64 bit veri yolları, aynı anda daha fazla veriyi taşıyabildiği için daha hızlıdır.
+
+Bilgisayarın Temel Bileşenleri
+Input (Giriş): Klavye, fare vb. cihazlar.
+
+Process (İşlem): Anakart, CPU vb. birimler.
+
+Output (Çıkış): Yazıcı, monitör vb. cihazlar.
+
+CPU (İŞLEMCİ)
+İşlemci, işlemleri parçalara ayırarak işler. Bu parçalara "döngü" adı verilir.
+
+Örneğin, bir matematik işleminin çözümü 3 satırdan oluşuyorsa, bu 3 satır 1 döngü olarak kabul edilir.
+
+1 saniyede işlenen döngü sayısı, işlemcinin hızını belirler.
+
+İşlemci Hızları
+İşlemci hızları, genellikle GHz (Gigahertz) cinsinden ifade edilir.
+
+Örneğin: 3 GHz hızında çalışan bir işlemci, saniyede 3 milyar döngü gerçekleştirebilir.
+
+3. CPU’LARDA VERİ YOLLARI
+3.1. Adres Veri Yolu (Address Bus)
+RAM’de veriler 8 bitlik bloklar hâlinde saklanır.
+
+İşlemci, RAM'den gerekli verileri alır, işlemesini yapar ve ardından tekrar RAM'e bırakır.
+
+RAM, bir anlamda CPU’nun geçici diski gibi çalışır: CPU, RAM’den veri okur ve RAM’e veri yazar.
+
+3.2. Veri Yolu (Data Bus)
+RAM üzerinde adreslenmiş veriler, veri yolları aracılığıyla taşınır.
+
+Veri yolu, işlemciden RAM’e ve diğer bileşenlere veri akışını sağlar.
+
+3.3. Front Side Bus (FSB)
+İşlemci ile RAM arasında veri taşıyan veri yoludur.
+
+Anakart üzerinde fiziksel olarak bulunur ve işlemcinin RAM’e ulaşmasını sağlar.
+
+3.4. Back Side Bus (BSB)
+İşlemci ile L2 Cache (seviye 2 önbellek) arasında veri taşır.
+
+İşlemcinin kendi içinde bulunur ve çok yüksek hızda çalışır.
+
+4. ANAKARTLAR
+Anakart, tüm donanımların birbiriyle haberleşmesini sağlayan temel donanım birimidir.
+
+Eğer işlemci bilgisayarın beyni ise, anakart da onun sinir sistemi gibidir.
+
+4.1. Anakart Türleri
+Günümüzde en yaygın kullanılan anakart türü ATX Form-Factor'dır.
+Farklı boyut ve kullanım amaçlarına göre çeşitleri vardır:
+
+EATX (Extended ATX)
+
+ATX
+
+Micro ATX
+
+Mini ITX
+
+5. YONGA SETİ (CHIPSET)
+Anakart üzerinde işlemci ile diğer donanımlar arasındaki iletişimi düzenleyen yapılara yonga seti denir. İki ana bölümden oluşur:
+
+5.1. Kuzey Köprüsü (North Bridge)
+İşlemci, RAM, ekran kartı (AGP slotu) ve Güney Köprüsü arasında veri iletişimi sağlar.
+
+Gelen verileri hızlandırarak işlemciye yönlendirir.
+
+İşlemciden gelen verileri ise diğer bileşenlere yavaşlatarak iletir.
+
+Sebebi: İşlemcinin diğer donanımlara göre çok daha hızlı olmasıdır. Yavaşlatılmazsa, sistemde veri tıkanıklığı (kuyruk oluşumu) yaşanabilir.
+
+5.2. Güney Köprüsü (South Bridge)
+PCI portları, paralel port, seri port ve depolama birimleri (SATA diskler gibi) arasında iletişimi sağlar.
+
+Gelen verileri Kuzey Köprüsü’ne, Kuzey Köprüsü’nden gelen verileri ise bu birimlere iletir.
+
+Veri akışında hız dengeleme işlevini Güney Köprüsü de destekler.
+
+6. BIOS (Basic Input Output System)
+Anakartın temel yazılımıdır ve bir nevi anakartın işletim sistemi olarak çalışır.
+
+BIOS, bir tür ROM bellek içinde yer alır.
+
+Donanımlar ile işletim sistemi arasında bir köprü görevi görür.
+
+BIOS bilgileri CMOS çipi üzerinde saklanır.
+
+Bilgisayar kapalıyken, BIOS pili sayesinde bu bilgiler korunur.
+
+6.1. BIOS Terminolojisi
+Master: Bilgisayarda birincil disk (öncelikli sürücü).
+
+Slave: İkincil disk.
+
+6.2. BIOS Görevleri
+CMOS Ayarları:
+Bilgisayarın hangi sürücüden açılacağını belirler.
+
+POST (Power On Self Test):
+Bilgisayar açılırken işlemci, RAM ve ekran kartı gibi donanımların çalışabilirlik testini yapar.
+
+Eğer bir hata varsa, sesli uyarılar (bip sesleri) ile kullanıcıyı bilgilendirir.
+
+Gölgeleme (Shadowing):
+İşlemcinin ilk çalışması için gerekli olan temel bilgileri diskten alıp RAM’e kopyalar.
+
+Böylece işlemci, sistemin açılışını daha hızlı gerçekleştirebilir.
+
+7. BIOS SES HATA KODLARI
+Sürekli ses: Güç kaynağı arızası
+
+Bir çok kısa bip sesi: Anakart arızası
+
+Bir uzun ses: Bellek taranmasında hata
+
+Bir uzun, bir kısa ses: Anakart veya BIOS çipi arızası
+
+Bir uzun, iki kısa ses: Ekran kartı arızası
+
+İki uzun, bir kısa ses: RAM (bellek) arızası
+
+İki kısa ses: Bellek Parity (eşlik) arızası
+
+Beş kısa ses: İşlemci hatası
+
+Sekiz kısa ses: Ekran kartı belleğinde okuma/yazma hatası
+
+Dokuz kısa ses: BIOS RAM hatası
+
+On bir kısa ses: Tampon bellek (cache memory) hatası
+
+RAM (Bellek) - ROM Memory
+RAM, işlemcinin hesaplamaları için kullandığı hızlı bir veri deposudur.
+Disklere oranla çok hızlı oldukları için işlemcinin birinci tercihi RAM olur.
+
+Veriyi geçici olarak saklar. Elektrikler kesildiğinde, besleme durduğunda veriler de kaybolur.
+
+RAM çeşitleri: EDO, SDRAM, DDR-SDRAM, RDRAM, DDR2, DDR3 ve DDR4 gibi nesillere ayrılır.
+
+Günümüzde yaygın olarak kullanılan RAM yapısı "DIMM" tipindedir. 64 bit bant genişliğine sahiptir ve çift veri yolu bulunur.
+
+RAM alırken "CL" değerine bakılır. CL süresi ne kadar düşükse RAM o kadar hızlıdır.
+
+ROM
+ROM, veriyi kalıcı olarak saklayan bir bellek türüdür.
+Güç kesildiğinde bile veriler kaybolmaz; işlemler ve bilgiler kalıcıdır.
+
+SUNUCULARA GİRİŞ
+Sunucular, performans odaklı donanım ve işletim sistemleridir.
+Mimari yapıları işlemler arasındaki darboğazı en aza indirgemek ve yüksek erişilebilirlik sağlamak amacıyla tasarlanmıştır.
+Boyutsal türleri:
+
+Rack-Mount (yatay tip)
+
+Tower (dikey tip)
+
+Blade (çoklu sunucu yapısı)
+
+Sunucular; ısı, sıvı ve nem değerlerinin kontrol edildiği ortamlarda, kabinetler içinde çalıştırılır.
+Sunucu yükseklikleri "U" (Unit) birimiyle ifade edilir. Örneğin:
+
+1U = 4.4 cm
+
+Sunucu Türleri
+Rack-Mount:
+
+Yatay tiptedir, kabinetlere yatay olarak monte edilirler.
+
+Genellikle 2U boyutundadırlar.
+
+Tower:
+
+Dikey tiptedir, kabinetlere uygun değildir.
+
+Rack tipi kadar güvenli ve verimli değillerdir.
+
+Blade:
+
+Bir şasede birden fazla sunucunun çalıştığı sistemdir.
+
+Performans ve depolama odaklıdır, genellikle 1U olurlar.
+
+Hot-Plug Özelliği
+Sunucularda, donanım parçalarında yeşil ve turuncu renkler varsa, bu parçalar sunucu çalışırken çıkarılıp değiştirilebilir.
+Bu özelliğe "Hot-Plug" denir.
+
+Çok İşlemcili Sunucular
+İçerisinde birden fazla CPU barındıran sunuculardır.
+İşlemci adedi "p" harfi ile gösterilir (Örn: 4p = 4 CPU).
+İki yöntem kullanılır:
+
+AMP (Asymmetric Multiprocessing):
+
+Her görev farklı bir CPU'ya atanır.
+
+CPU'lar birbirleriyle doğrudan haberleşmezler.
+
+SMP (Symmetric Multiprocessing):
+
+Görevler birden fazla CPU arasında paylaştırılır.
+
+CPU'lar ortak çalışır.
+
+RAM kullanımında 2 yöntem bulunur:
+
+Tight Coupling (Sıkı Bağlantı):
+Bellekler ortak kullanılır. Bellekteki sorun tüm CPU'ları etkileyebilir.
+
+Loose Coupling (Gevşek Bağlantı):
+Her CPU'ya ayrı bellek grubu atanır. CPU'lar ortak çalışır fakat bellek paylaşımı yapılmaz.
+(Maliyetlidir çünkü her CPU için ek bellek gerekir.)
+
+SUNUCU RAM'LERİNDE KORUMA
+Sunucu belleklerinde arızaları önlemek ve hataları kurtarmak için yöntemler kullanılır.
+
+1. Soft Error (Yazılımsal Hata)
+Bellek hücresinin elektriksel etkilerden dolayı hata vermesidir.
+Tespit ve onarım yöntemleri:
+
+Parity Control
+
+Error Checking and Correcting Memory
+
+Advanced Error Checking and Correcting Memory (AECC)
+
+2. Hard Error (Donanımsal Hata)
+Fiziksel bir arıza nedeniyle oluşan hata türüdür.
+Önlem yöntemleri:
+
+Online Spare Memory
+
+Mirrored Memory
+
+RAID Memory
+
+Array (Sıralama/Dizi) Teknolojileri
+Array: Bir grup diskin tek bir disk gibi algılanmasıdır. Veriler tüm disklere dağıtılır ("Data Striping").
+
+Array Controller kartı bu işlemi yönetir.
+
+Küçük kapasiteli çok sayıda disk, büyük kapasiteli az sayıda diskten daha performanslıdır.
+
+RAID
+Birden fazla diskin yazılım veya donanım aracılığıyla tek bir mantıksal sürücü gibi kullanılmasıdır.
+
+Temel kavramlar:
+
+Mirroring: Verilerin birden fazla diskte bulunması.
+
+Striping: Verilerin birden fazla diske yazılması.
+
+Error-Correction: Arıza durumunda verilerin diğer disklerden kurtarılması.
+
+RAID Türleri:
+
+RAID 0: Hata toleransı yok, performans odaklı.
+
+RAID 1: Hata toleranslı, veri bütünlüğü odaklı.
+
+RAID 5: 1 disk arızasına toleranslı, en az 3 disk gerekli.
+
+Ek Bilgiler:
+
+Hot Spare: Pasif bekleyen yedek disk.
+
+Strip Size: Verilerin diske hangi boyutta bölüneceği.
+
+Sector: İşletim sisteminin veriyi diske kaç boyutta yazacağı.
+
+Array Accelerator: Okuma işlemlerini hızlandırır, tahmin yaparak önceden veri çeker.
+
+BBWC: Elektrik kesilse bile önbellekteki verilerin korunmasını sağlar (pil destekli).
+
+Fiziksel Sunuculara İşletim Sistemi Kurulumu
+Her üreticinin kendine ait arayüzlü bir uygulaması vardır (BIOS üzerinden girilir).
+
+Uzaktan Fiziksel Sunucu Kontrolü
+Her üreticinin (vendor) kendine ait uzaktan yönetim uygulamaları vardır.
+
+ISO, iDRAC, XClarity gibi araçlar ile erişilir.
+
+Kendi ethernet portları vardır.
+
+NAS (Network Attached Storage)
+Ağ üzerinde dosya sistemli bir depolama alanıdır.
+
+Yedekleme ve ortak kullanım amaçlıdır.
+
+RAID yapılabilir.
+
+Disk bölümlerine "Bay" denir.
+
+RAID İçin Önemli Notlar
+Aynı marka, model ve boyutta diskler kullanılmalı.
+
+Strip size doğru seçilmeli.
+
+Arıza sonrası sistem yavaş çalışır.
+
+Cache boyutu yüksek Array Controller tercih edilmeli.
+
+Ağ Protokolleri ve Mimarileri
+Network:
+
+Birbirleriyle kurallar çerçevesinde iletişim kurabilen cihaz topluluğudur.
+
+Program paylaşımı, dosya paylaşımı, yazıcı paylaşımı, güvenlik, merkezi yönetim sağlar.
+
+Network Bileşenleri:
+
+Yazılım: İşletim sistemleri, iletişim protokolleri, ağ programları.
+
+Donanım: Kablo, switch, router, bilgisayar vb.
+
+Sunucu ve İstemci Rolleri:
+
+Server: Ağ kaynaklarını sunar.
+
+Client: Kaynaklara erişir.
+
+Ağ Donanımları
+NIC (Network Interface Card): Ağa bağlanmak için şarttır. RJ45 ve Wireless tipleri vardır.
+
+Repeater / Hub: Sinyali güçlendirir ve mesafeyi artırır.
+
+Switch: Cihazlar arası iletişimi sağlar. MAC adreslerine göre yönlendirir.
+
+Router: Farklı networkleri birleştirir. IP adreslerine göre yönlendirme yapar.
+
+Firewall: Paketleri kontrol eder, güvenliği sağlar.
+
+Ağ Mimarisi
+Ağ Topolojileri:
+
+Bus Topoloji: Doğrusal bağlantı, tek kablo ile.
+
+Star Topoloji: Merkezi cihaz (switch/router) üzerinden bağlantı.
+
+Ring Topoloji: Halkasal döngü yapısında veri iletişimi.
+
+Ağın Büyüklüğü:
+
+LAN: Lokal alan ağı (küçük ve hızlı).
+
+WAN: Geniş alan ağı (birden fazla LAN’ın birleşmesi).
+
+ğ Protokolü
+Ağdaki cihazların iletişim kurabilmesi için gerekli kurallar bütünüdür.
+
+En yaygın protokol TCP/IP’dir: esnek, hızlı ve her ağda kullanılabilir.
+
+OSI Referans Modeli
+TCP/IP’den önce kullanılmıştır.
+
+7 Katmandan oluşur:
+
+Physical
+
+Data Link
+
+Network
+
+Transport
+
+Session
+
+Presentation
+
+Application
+
+Veri gönderiminde:
+
+Enkapsülasyon: Göndericide her katmanda veri üzerine bilgi eklenir.
+
+Deenkapsülasyon: Alıcıda her katmanda bu bilgiler çıkarılır.
+
+Red Team çalışmak isteyenler özellikle Network ve Transport katmanlarını detaylı öğrenmelidir.
+
+TCP ve UDP
+TCP: Bağlantı temelli, güvenilir veri iletimi sağlar. (Three-way Handshake)
+
+UDP: Bağlantı kurmadan veri iletir, daha hızlı ama güvensizdir.
+
+Portlar
+Bilgisayardaki giriş kapılarıdır.
+
+0–1023 arası "well-known ports" olarak bilinir.
+
+Protokol ve Port Farkı:
+
+Protokol bir "yol", Port bir "kapı" gibi düşünülebilir.
+
+Portun protokolü olur, ama protokolün portu olmaz.
+
+Örnek: HTTP -> Port 80, Protokol TCP.
+
+TCP Başarım Araçları
+ARP: MAC adresi öğrenme protokolüdür.
+
+Bilinmeyen MAC adresi için ARP Request yayınlanır.
+
+Adresler:
+
+MAC Adresi: Fiziksel, değişmez.
+
+IP Adresi: Mantıksal, değiştirilebilir.
+
+ICMP
+Ağ sorunlarını tespit etmek için kullanılır:
+
+Ping: Hedefe erişim testi (echo request/reply).
+
+Tracert: Paketin hedefe giderken geçtiği noktaları gösterir.
+
+IP Adresleri
+IP = Network ID + Host ID
+
+Aynı ağdaki cihazların Network ID'si aynı, Host ID'si farklı olmalıdır.
+
+Örnek:
+
+IP Adresi: 192.168.1.10
+
+Network ID: 192.168.1
+
+Host ID: 10
+
+İletişim Türleri:
+
+Unicast: Tek cihaza.
+
+Multicast: Belirli bir gruba.
+
+Broadcast: Tüm cihazlara (sonu .255 olan adres).
+
+Ağ Servisleri
+DNS (Domain Name System)
+Alan adlarını IP adreslerine çevirir.
+
+Windows’ta DNS sorgulama sırası:
+
+Hosts Dosyası (C:\Windows\System32\drivers\etc\hosts)
+
+Önbellek (TTL süresi kadar tutulur)
+
+DNS Server
+
+DNS Resolver
+Tarayıcılar ve işletim sistemleri gibi istemcilerde çalışan, isim çözümlemeyi sağlayan servistir.
+
+Resource Records
+DNS sunucusundaki kayıtlar (A, AAAA, MX gibi).
+
+Query
+DNS’e gönderilen isim çözümleme isteğidir.
+
+DHCP (Dynamic Host Configuration Protocol)
+IP, Subnet Mask, Default Gateway, DNS gibi bilgileri otomatik dağıtır.
+
+Kiralama süresi: Varsayılan 8 gün.
+
+Exclusion Range: Belirli IP'lerin kiralamadan hariç tutulması.
+
+APIPA (Automatic Private IP Addressing)
+DHCP’den cevap alınamazsa otomatik IP ataması yapar.
+
+IP Aralığı: 169.254.x.x
+
+Subnet: 255.255.0.0
+
+NAT (Network Address Translation)
+Private IP ve Public IP arasında adres dönüşümü yapar.
+
+LAN ile WAN arasındaki iletişimi sağlar.
+
+
+
+
+
+
